@@ -34,4 +34,8 @@ return [
     'coinmarketcap' => [
         'key' => env('COIN_MARKET_CAP_API_KEY'),
     ],
+
+    'newscatcherapi' => [
+        'key' => env('NEWS_CATCHER_API_KEY'),
+    ],
 ];

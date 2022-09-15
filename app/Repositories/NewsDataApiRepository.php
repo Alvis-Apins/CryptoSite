@@ -16,7 +16,7 @@ class NewsDataApiRepository implements ApiRequest
                 'base_uri' => 'https://api.newscatcherapi.com'
             ]);
             $response = $client->request('GET', '/v2/search', [
-                'headers' => ['x-api-key' => '4s5xVQCIfHc02aA9JGA0KPY4EsEv2lUn8kH-3hgCZq8'],
+                'headers' => ['x-api-key' => config('services.newscatcherapi.key')],
                 'query' => [
                     'q' => 'crypto',
                     "sources" => "forbes.com,coindesk.com,benzinga.com,businessinsider.com,cnbc.com,yahoo.com",

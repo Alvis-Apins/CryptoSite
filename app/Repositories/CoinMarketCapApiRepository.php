@@ -14,7 +14,6 @@ class CoinMarketCapApiRepository implements ApiRequest
         $response = $client->request('GET', 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?CMC_PRO_API_KEY=' . config('services.coinmarketcap.key'));
         $cryptoData = json_decode($response->getBody());
 
-
         $count = DB::table('crypto_assets')->count('id');
 
         if ($count == null) {

@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Repositories\NewsDataApiRepository;
 use Illuminate\Support\Facades\DB;
+use Illuminate\View\View;
 
 class HomeController extends Controller
 {
-    public function index()
+    public function index(): View
     {
         $cryptoNews = DB::table('articles')->paginate(8);
 

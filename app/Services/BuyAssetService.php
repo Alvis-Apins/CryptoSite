@@ -13,7 +13,7 @@ class BuyAssetService
         $this->dealsHandlingRepository = $dealsHandlingRepository;
     }
 
-    public function execute(string $asset):array
+    public function execute(string $asset): array
     {
         return $this->dealsHandlingRepository->assetBuyingInfo($asset);
     }

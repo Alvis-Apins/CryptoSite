@@ -3,7 +3,6 @@
 namespace App\Services;
 
 use App\Repositories\DealsHandlingRepository;
-use Illuminate\Database\Eloquent\Model;
 
 class AvailableMoneyService
 {

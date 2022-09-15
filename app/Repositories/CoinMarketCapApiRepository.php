@@ -25,9 +25,9 @@ class CoinMarketCapApiRepository implements ApiRequest
                 $asset->asset_id = $cryptoAsset->id;
                 $asset->name = $cryptoAsset->name;
                 $asset->symbol = $cryptoAsset->symbol;
-                if ($cryptoAsset->max_supply == null){
+                if ($cryptoAsset->max_supply == null) {
                     $asset->max_supply = 'unlimited';
-                }else{
+                } else {
                     $asset->max_supply = $cryptoAsset->max_supply;
                 }
                 $asset->price = $cryptoAsset->quote->USD->price;
@@ -38,10 +38,10 @@ class CoinMarketCapApiRepository implements ApiRequest
                 $asset->percent_change_trimester = $cryptoAsset->quote->USD->percent_change_90d;
                 $asset->save();
             }
-        }else{
-            foreach ($cryptoData->data as $cryptoAsset){
+        } else {
+            foreach ($cryptoData->data as $cryptoAsset) {
                 DB::table('crypto_assets')
-                    ->where('asset_id','=',"$cryptoAsset->id")
+                    ->where('asset_id', '=', "$cryptoAsset->id")
                     ->update([
                         'price' => $cryptoAsset->quote->USD->price,
                         'market_cap' => $cryptoAsset->quote->USD->market_cap,

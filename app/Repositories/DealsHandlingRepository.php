@@ -16,7 +16,7 @@ class DealsHandlingRepository
             ->first();
     }
 
-    public function assetBuyingInfo(string $asset):array
+    public function assetBuyingInfo(string $asset): array
     {
         $purchaseData = DB::table('crypto_assets')
             ->select('asset_id', 'price')
@@ -28,14 +28,4 @@ class DealsHandlingRepository
             'asset_id' => $purchaseData->asset_id
         ];
     }
-
-    public function moneyInvestedInfo()
-    {
-        $ownedAssets = DB::table('purchases')->get();
-
-        echo "<pre>";
-        var_dump($ownedAssets);
-        die;
-    }
-
 }

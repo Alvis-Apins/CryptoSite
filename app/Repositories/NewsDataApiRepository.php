@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 
 class NewsDataApiRepository implements ApiRequest
 {
-    public function getApiData()
+    public function getApiData(): void
     {
         DB::table('articles')->truncate();
         for ($i = 1; $i <= 2; $i++) {

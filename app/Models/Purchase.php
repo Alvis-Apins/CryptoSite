@@ -11,7 +11,7 @@ class Purchase extends Model
 {
     use HasFactory;
 
-    public function sellOne(string $asset, string $amount)
+    public function sellOne(string $asset, string $amount):void
     {
 
         $asset = DB::table('purchases')
@@ -66,7 +66,7 @@ class Purchase extends Model
         }
     }
 
-    public function sellAll()
+    public function sellAll():void
     {
         $assetsToSell = Purchase::all()->toArray();
 
@@ -94,7 +94,7 @@ class Purchase extends Model
             ->delete();
     }
 
-    public function buy($asset, $assetId, $value, $price)
+    public function buy($asset, $assetId, $value, $price):void
     {
         $user = Auth::user()->getAuthIdentifier();
         $assetExists = DB::table('purchases')
@@ -123,7 +123,7 @@ class Purchase extends Model
         }
     }
 
-    public function updatePurchases()
+    public function updatePurchases():void
     {
         $assetsToUpdate = Purchase::all()->toArray();
 

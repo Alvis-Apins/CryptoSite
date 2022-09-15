@@ -16,7 +16,6 @@ class MyWalletController extends Controller
 {
     public function index(SummaryService $summaryService, AvailableMoneyService $availableMoneyService): View
     {
-
         $update = new Purchase();
         $update->updatePurchases();
 
@@ -26,7 +25,7 @@ class MyWalletController extends Controller
 
         $soldAssets = DB::table('sales')
             ->where('user_id', Auth::user()->getAuthIdentifier())
-            ->orderBy('sold_at','desc')
+            ->orderBy('sold_at', 'desc')
             ->take(10)
             ->get();
 
@@ -49,9 +48,7 @@ class MyWalletController extends Controller
             ->where('user_id', '=', "$user")
             ->where('asset', '=', "$asset")
             ->first();
-//        echo "<pre>";
-//        var_dump($amount->amount);
-//        die;
+
         $this->validate($request, [
             'asset' => ['string'],
             'value' => ['required', 'numeric', "max:$amount->amount", "min:0"]
@@ -61,9 +58,9 @@ class MyWalletController extends Controller
         $amountToSell = $request->get('value');
 
         $purchase = new Purchase();
-        if ($assetToSell == null && $amountToSell == null){
+        if ($assetToSell == null && $amountToSell == null) {
             $purchase->sellAll();
-        }else{
+        } else {
             $purchase->sellOne($assetToSell, $amountToSell);
         }
 

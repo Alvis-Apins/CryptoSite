@@ -29,7 +29,7 @@ class CryptoSummaryRepository
         $summary = new Summary();
         $summary->money_invested = $invested;
         $summary->money_to_invest = $toInvest->valet;
-        $summary->historic_gains= $pastGains;
+        $summary->historic_gains = $pastGains;
         $summary->possible_gains = $possibleGains - $invested;
 
         return $summary;

@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Services\EvaluationService;
-use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
 
 class EvaluationController extends Controller

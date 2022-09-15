@@ -3,7 +3,6 @@
 namespace App\Services;
 
 use App\Repositories\EvaluationRepository;
-use function Symfony\Component\Translation\t;
 
 class EvaluationService
 {
@@ -14,7 +13,8 @@ class EvaluationService
         $this->evaluationRepository = $evaluationRepository;
     }
 
-    public function execute():array{
+    public function execute(): array
+    {
         return $this->evaluationRepository->getEvaluationData();
     }
 }

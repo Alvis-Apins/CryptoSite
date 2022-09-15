@@ -36,7 +36,7 @@ after cloning project locally
 <li>create .env file and add info like in .env.example</li>
 <li>in .env file configure database connection</li>
 </ul>
-
+---
 <pre>
 php artisan migrate:fresh
 </pre>
@@ -57,6 +57,9 @@ php artisan schedule:work
 </ul>
 
 ![Screenshot from 2022-09-15 05-16-49](https://user-images.githubusercontent.com/104777801/190297946-33a981c1-7cfd-409e-bb05-79fe13632fd1.png)
+---
 ![Screenshot from 2022-09-15 05-17-08](https://user-images.githubusercontent.com/104777801/190297954-b506da98-2ae4-4197-8d28-7ca759a3ddb9.png)
+---
 ![Screenshot from 2022-09-15 05-17-17](https://user-images.githubusercontent.com/104777801/190297960-2230e433-7b4b-486c-abc2-7ffda594a3d1.png)
+---
 ![Screenshot from 2022-09-15 05-17-04](https://user-images.githubusercontent.com/104777801/190297968-0fe08aba-36c9-42c3-94a9-100c2b84f1c4.png)

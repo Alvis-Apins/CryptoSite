@@ -36,7 +36,7 @@ after cloning project locally
 <li>create .env file and add info like in .env.example</li>
 <li>in .env file configure database connection</li>
 </ul>
----
+
 <pre>
 php artisan migrate:fresh
 </pre>

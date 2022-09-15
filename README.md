@@ -16,11 +16,11 @@ Tools used:
 3. MySql
 </pre>
 
-<pre>
+
 Api keys needed:
 1. https://coinmarketcap.com/
 2. https://newscatcherapi.com/
-</pre>
+
 
 <p>
 Setup:

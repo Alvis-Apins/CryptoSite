@@ -8,7 +8,8 @@ Info:
 Web application that allows to buy and sell crypto assets according to latest
 prices. Get latest crypto news headlines. Evaluate and browse assets to buy
 and sell.
-
+</pre>
+<pre>
 Tools used:
 1. Laravel 9
 2. PHP 8.0

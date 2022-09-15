@@ -16,6 +16,12 @@ Tools used:
 3. MySql
 </pre>
 
+<pre>
+Api keys needed:
+1. https://coinmarketcap.com/
+2. https://newscatcherapi.com/
+</pre>
+
 <p>
 Setup:
 </p>
@@ -26,7 +32,6 @@ after cloning project locally
 <pre>
 <b>npm install</b>
 </pre>
-
 <ul>
 <li>create .env file and add info like in .env.example</li>
 <li>in .env file configure database connection</li>

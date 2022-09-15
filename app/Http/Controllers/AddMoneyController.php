@@ -24,11 +24,8 @@ class AddMoneyController extends Controller
             ->where('id', Auth::user()->getAuthIdentifier())
             ->get();
 
-
         $updatedValue = $moneyInValet->toArray()[0]->valet + (float)$request->get('amount');
-
         DB::update('update users set valet =' . $updatedValue . ' where id = ' . Auth::user()->getAuthIdentifier());
-
 
         return redirect('/my-wallet');
     }

@@ -17,7 +17,7 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->command('quote:news_update')
-            ->everyMinute();
+            ->everyThirtyMinutes();
 
         $schedule->command('quote:assets_update')
             ->everyMinute();

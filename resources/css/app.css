@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-background {
+    background: url("https://levertyfinancial.com/wp-content/uploads/2020/08/Foggy-Pine-Trees.jpg") no-repeat center fixed;
+    background-size: cover;
+    height: 100vh;
+}
+
+.custom-red-background {
+    background: rgb(255,51,51);
+    background: radial-gradient(circle, rgba(255,51,51,1) 0%, rgba(0,0,0,1) 94%);
+}
+
+.custom-green-background {
+    background: rgb(101,255,51);
+    background: radial-gradient(circle, rgba(101,255,51,1) 0%, rgba(0,0,0,1) 94%);
+}
